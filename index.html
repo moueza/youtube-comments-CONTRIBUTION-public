@@ -32,7 +32,7 @@
     <div id="app">
 
       <h1>youtube comments CONTRIBUTION public</h1>
-      v18
+      v19
       <br>
         
       <p>Commentaires qui ont été rejetés par Youtube, par exemple</p>
@@ -80,7 +80,7 @@
 			
 		
 	  <tr>
-            <td><a href="{{ cretinsFrom }}">{{ cretinsFrom }}</a></td>
+            <td><a v-bind:href="cretinsfrom">{{ cretinsFrom }}</a></td>
 	    <td><a href=""></a></td>
 	    <td>{{ cretinsTitle }}</td>
 	    <td>Personal bookmarks shared :
@@ -135,13 +135,18 @@
                 costOfCoconuts: 8,
 		    
 		cretinsTitle:    "École : la fabrique des crétins ? Avec Jean-Paul Brighelli",
-		    cretinsFrom: 'https://www.youtube.com/watch?v=H8p-7N_DNVk&t=1474s',
+		    cretinsfrom: 'https://www.youtube.com/watch?v=H8p-7N_DNVk&t=1474s',
             },
             computed: {
                 totalAmount() {
                     return this.costOfApples + this.costOfBananas + this.costOfCoconuts
                 }
-            }
+            },
+		//https://vuejs.org/v2/guide/components-props.html#Prop-Casing-camelCase-vs-kebab-case
+				  props: ['postTitle'],
+ //Component https://vuejs.org/v2/guide/components-props.html#Prop-Casing-camelCase-vs-kebab-case
+		//template: '<h3>{{ postTitle }}</h3>'
+
 
 	
 		
